@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html x-ng-app>
+  <head>
+    <title>GrowShare</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body x-ng-controller="Controller">
+			<div class="row">
+				<div class="col-xs-1 col-sm-2 col-md-3 col-lg-4"></div>
+				<!--CONTENT COLUMN-->
+				<div class="col-xs-10 col-sm-8 col-md-6 col-lg-4" id="content">
+					<div ng-repeat="content in foodcontent" id="center-container">
+						<span id="grower">{{content.grower}}</span><br>
+						<span id="contact-info">{{content.contactInfo}}</span><br>
+						<img ng-src="{{content.img}}">
+					</div>
+				</div>
+				<div class="col-xs-1 col-sm-2 col-md-3 col-lg-4"></div>
+			</div>
+   
+    <!--scripts-->
+		<script src="js/angular.js"></script>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+		<script>
+			function Controller($scope) {
+				$scope.foodcontent = [
+					{grower: 'grower1', contactInfo:'2a',img:'/assets/crop1.png'},
+					{grower: 'grower2', contactInfo:'2b',img:'/assets/crop2.png'},
+					{grower: 'grower3', contactInfo:'2c',img:'/assets/crop3.png'}
+				];
+			}
+		</script>
+  </body>
+</html> 
