@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html x-ng-app>
+<html x-ng-app="shareApp">
   <head>
     <title>GrowShare</title>
 		<meta http-equiv="Content-Type" content="text/html; Charset=UTF-8"/> 
@@ -21,7 +21,7 @@
 						</div>
 							<div id="contact-info">
 								<a href="tel:{{content.contactTel}}" id="tel">Call</a>
-								<a href="sms//:{{content.contactTel}}" id="sms">SMS</a>
+								<a href="sms:{{content.contactTel}}" id="sms">SMS</a>
 							</div>
 							<div id="images"><img ng-src="{{content.img}}"></div>
 						</div>
@@ -36,13 +36,22 @@
 		<script src="js/bootstrap.js"></script>
 		
 		<script>
-			function Controller($scope) {
+			var localShare = angular.module('shareApp', []);
+			
+			localShare.config(['$compileProvider',
+				function( $compileProvider ){   
+					$compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|sms):/);
+				}
+			]);
+	
+			localShare.controller('Controller',
+			function ($scope) {
 				$scope.foodcontent = [
 					{grower: 'Zac Rolz', apt:'1a', contactTel:'+46739543454', img:'/assets/crop1.png'},
 					{grower: 'Emil Stenström ', apt:'2b', contactTel:'+46709568536', img:'/assets/crop2.png'},
 					{grower: 'Jonas Torrens', apt:'3c', contactTel:'+46767159679', img:'/assets/crop3.png'}
 				];
-			}
+			});
 		</script>
   </body>
 </html> 
