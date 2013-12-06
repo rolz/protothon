@@ -39,8 +39,8 @@
 			var localShare = angular.module('shareApp', []);
 			
 			localShare.config(['$compileProvider',
-				function( $compileProvider ){   
-					$compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|sms):/);
+				function( $compileProvider ){
+					$compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|tel|sms):/);
 				}
 			]);
 	
