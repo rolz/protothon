@@ -9,11 +9,20 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body x-ng-controller="Controller">
+		
+			<div class="row" id="title">
+				<div class="col-xs-0 col-sm-2 col-md-3 col-lg-3"></div>
+				<!--CONTENT COLUMN-->
+				<div class="col-xs-12 col-sm-8 col-md-6 col-lg-6" id="content">
+					<div id="titleName"><h1>LocalShare</h1></div>
+				</div>
+				<div class="col-xs-0 col-sm-1 col-md-3 col-lg-3"></div>
+			</div>		
+
 			<div class="row">
 				<div class="col-xs-0 col-sm-2 col-md-3 col-lg-3"></div>
 				<!--CONTENT COLUMN-->
 				<div class="col-xs-12 col-sm-8 col-md-6 col-lg-6" id="content">
-					<div id="title"><h1>LocalShare</h1></div>
 					<div ng-repeat="content in foodcontent" id="center-container">
 						<div id="local-contact">
 							<span id="grower" ng-bind="content.grower"></span>
@@ -44,12 +53,14 @@
 				}
 			]);
 	
+//			var url = "/~Zac/protothon/switchedonnature/";
+			
 			localShare.controller('Controller',
 			function ($scope) {
 				$scope.foodcontent = [
-					{grower: 'Zac Rolz', apt:'1a', contactTel:'+46739543454', img:'/assets/crop1.png'},
-					{grower: 'Emil Stenström ', apt:'2b', contactTel:'+46709568536', img:'/assets/crop2.png'},
-					{grower: 'Jonas Torrens', apt:'3c', contactTel:'+46767159679', img:'/assets/crop3.png'}
+					{grower: 'Zac Rolz', apt:'(1a)', contactTel:'+46739543454', img:'/assets/crop1.png'},
+					{grower: 'Emil Stenström ', apt:'(2b)', contactTel:'+46709568536', img:'/assets/crop2.png'},
+					{grower: 'Jonas Torrens', apt:'(3c)', contactTel:'+46767159679', img:'/assets/crop3.png'}
 				];
 			});
 		</script>

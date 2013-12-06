@@ -1,9 +1,30 @@
+@font-face {
+font-family: futura;
+src: url(/fonts/Futura.ttc);
+font-weight:medium;
+}
+
+
 #content {
 	max-width:38.250em;
 	text-align:center;
 }
 
 #title {
+	background:#333;
+	margin-bottom: 0.938em;
+}
+
+a {
+	font-size:24px;
+}
+
+h1 {
+	color:#fff;
+	font-family: futura;
+}
+
+p {
 	
 }
 
@@ -16,11 +37,15 @@
 }
 
 #grower {
-	margin-right:0.625em;
+	font-family: futura;
+	font-size:24px;
+	margin-right:0.125em;
 }
 
-a#apt {
-	margin-left:0.625em;
+#apt {
+	font-family: futura;
+	font-size:22px;
+	margin-left:0.125em;
 }
 
 #contact-info {
@@ -28,10 +53,12 @@ a#apt {
 }
 
 a#tel {
+	font-family: futura;
 	margin-right:0.625em;
 }
 
 a#sms {
+	font-family: futura;
 	margin-left:0.625em;
 }
 
