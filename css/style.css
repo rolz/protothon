@@ -1,11 +1,21 @@
+#content {
+	margin-top:3.125em;
+	max-width:38.250em;
+	text-align:center;
+}
+
+#grower {
+	margin-bottom:0.938em;
+	
+}
+
+#contact-info {
+	margin-bottom:0.938em;
+
+}
+
 img {
-	width:400px;
+	max-width:100%;
+	width:38.250em;
 	height: auto;
 }
-
-#content {
-	margin-top:50px;
-	max-width:612px;
-}
-
-
