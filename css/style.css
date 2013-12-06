@@ -1,17 +1,38 @@
 #content {
-	margin-top:3.125em;
 	max-width:38.250em;
 	text-align:center;
 }
 
-#grower {
-	margin-bottom:0.938em;
+#title {
 	
 }
 
-#contact-info {
-	margin-bottom:0.938em;
+#center-container {
+	margin-bottom: 2.813em
+}
 
+#local-contact {
+	margin-bottom:0.313em
+}
+
+#grower {
+	margin-right:0.625em;
+}
+
+a#apt {
+	margin-left:0.625em;
+}
+
+#contact-info {
+	margin-bottom:1.250em;
+}
+
+a#tel {
+	margin-right:0.625em;
+}
+
+a#sms {
+	margin-left:0.625em;
 }
 
 img {

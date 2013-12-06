@@ -4,7 +4,7 @@
     <title>GrowShare</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body x-ng-controller="Controller">
@@ -12,12 +12,19 @@
 				<div class="col-xs-0 col-sm-2 col-md-3 col-lg-3"></div>
 				<!--CONTENT COLUMN-->
 				<div class="col-xs-12 col-sm-8 col-md-6 col-lg-6" id="content">
+					<div id="title"><h1>LocalShare</h1></div>
 					<div ng-repeat="content in foodcontent" id="center-container">
-						<div id="grower">{{content.grower}}</div>
-						<div id="contact-info"><a href="tel:{{content.contactInfo}}">{{content.contactInfo}}</a></div>
-						<div id="images"><img ng-src="{{content.img}}"></div>
-					</div>
-				</div>
+						<div id="local-contact">
+							<span id="grower" ng-bind="content.grower"></span>
+							<span id="apt" ng-bind="content.apt"></span>
+						</div>
+							<div id="contact-info">
+								<a href="tel:{{content.contactTel}}" id="tel">Call</a>
+								<a href="sms//{{content.contacSMS}}" id="sms">SMS</a>
+							</div>
+							<div id="images"><img ng-src="{{content.img}}"></div>
+						</div>
+					</div>	
 				<div class="col-xs-0 col-sm-1 col-md-3 col-lg-3"></div>
 			</div>
    
@@ -33,9 +40,9 @@
 		<script>
 			function Controller($scope) {
 				$scope.foodcontent = [
-					{grower: 'grower1', contactInfo:'+46739543454',img:'/assets/crop1.png'},
-					{grower: 'grower2', contactInfo:'+46-739-543454',img:'/assets/crop2.png'},
-					{grower: 'grower3', contactInfo:'+46.739.543454',img:'/assets/crop3.png'}
+					{grower: 'Zac Rolz', apt:'1a', contactTel:'+46739543454', contactSMS:'sms:+46767159679',img:'/assets/crop1.png'},
+					{grower: 'Emil Stenström ', apt:'2b', contactInfo:'+46709568536', contactSMS:'sms:+46709568536',img:'/assets/crop2.png'},
+					{grower: 'Jonas Torrens', apt:'3c', contactInfo:'+46767159679', contactSMS:'sms:+46767159679', img:'/assets/crop3.png'}
 				];
 			}
 		</script>
