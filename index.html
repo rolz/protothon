@@ -20,7 +20,7 @@
 						</div>
 							<div id="contact-info">
 								<a href="tel:{{content.contactTel}}" id="tel">Call</a>
-								<a href="sms//{{content.contacSMS}}" id="sms">SMS</a>
+								<a href="sms:{{content.contacTel}}" id="sms">SMS</a>
 							</div>
 							<div id="images"><img ng-src="{{content.img}}"></div>
 						</div>
@@ -40,9 +40,9 @@
 		<script>
 			function Controller($scope) {
 				$scope.foodcontent = [
-					{grower: 'Zac Rolz', apt:'1a', contactTel:'+46739543454', contactSMS:'sms:+46767159679',img:'/assets/crop1.png'},
-					{grower: 'Emil Stenström ', apt:'2b', contactInfo:'+46709568536', contactSMS:'sms:+46709568536',img:'/assets/crop2.png'},
-					{grower: 'Jonas Torrens', apt:'3c', contactInfo:'+46767159679', contactSMS:'sms:+46767159679', img:'/assets/crop3.png'}
+					{grower: 'Zac Rolz', apt:'1a', contactTel:'+46739543454', img:'/assets/crop1.png'},
+					{grower: 'Emil Stenström ', apt:'2b', contactTel:'+46709568536', img:'/assets/crop2.png'},
+					{grower: 'Jonas Torrens', apt:'3c', contactTel:'+46767159679', img:'/assets/crop3.png'}
 				];
 			}
 		</script>
